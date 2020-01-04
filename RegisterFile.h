@@ -26,6 +26,7 @@ public:
     RegisterFile();
     char getValue(RegIndex index);
     void setValue(RegIndex index, char value);
+    static RegIndex lookupRegIndex(char val);
 
 };
 

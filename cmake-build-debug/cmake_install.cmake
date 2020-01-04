@@ -1,4 +1,4 @@
-# Install script for directory: /Users/christian/CLionProjects/C++CPU/x86-CPU-CPP-Implementation
+# Install script for directory: /Users/Christian/CLionProjects/x86-CPU-CPP-Implementation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/christian/CLionProjects/C++CPU/x86-CPU-CPP-Implementation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/Christian/CLionProjects/x86-CPU-CPP-Implementation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

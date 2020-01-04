@@ -22,6 +22,8 @@ public:
     Instruction pop();
     int getLength();
     Instruction at(int index);
+    void set(int index, char value);
+
 };
 
 

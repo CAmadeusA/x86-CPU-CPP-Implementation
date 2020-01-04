@@ -21,7 +21,7 @@ class CPU {
     RegisterFile registerFile;
 public:
     CPU(char filepath[]);
-    void loadFromRomToRam();
+    void loadToRam();
     void execute();
 };
 

@@ -23,3 +23,9 @@ int RAM::getLength() {
 Instruction RAM::at(int index) {
     return contents[index];
 }
+
+void RAM::set(int index, char value) {
+    contents[index] = Instruction(value);
+}
+
+

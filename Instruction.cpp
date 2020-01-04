@@ -9,23 +9,23 @@ using namespace std;
 
 Instruction::Instruction(long binary) {
     // Masks the binary where appropriate in order to gather the necessary values from the instruction set according to the ISA found in Instruction.h;
-    for (char i = MOV; i < RET; i++) {
-        long mask = 0b00000000111100000000000000000000;
-        if (((binary & mask)>>20) == (i)) {
-            controlCode = i;
-        }
-    }
-    for (char i = NUL; i < JLE; i++) {
-        long mask = 0b00000000000011110000000000000000;
-        if (((binary & mask)>>16) == (i)) {
-            funCode = i;
-        }
-    }
-    long mask = 0b00000000000000001111111100000000;
-    rA = ((binary & mask) >> 8);
-    mask = 0b00000000000000000000000011111111;
-    rB = ((binary & mask));
+    long mask = 0b11111111000000000000000000000000;
+    controlCode = static_cast<char>((binary & mask) >> 24);
 
+    mask = 0b00000000111111110000000000000000;
+    funCode = static_cast<char>((binary & mask) >> 16);
+
+    mask = 0b00000000000000001111111100000000;
+    rA = static_cast<char>((binary & mask) >> 8);
+
+    mask = 0b00000000000000000000000011111111;
+    rB = static_cast<char>((binary & mask));
+
+    value = binary;
+}
+
+long Instruction::getValue() {
+    return value;
 }
 
 char Instruction::getControlCode() {
